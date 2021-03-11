@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opgave 3</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+    <div id="app">
+        <input id="InputField" v-model="string" placeholder="Write to convert string">
+        <button id="button" v-on:click="addTo(string)" class="btn btn-primary">Show it</button>
+        <ol>
+            <li v-for="string in list">{{string}} </li>
+        </ol>
+        <table class="table" style="width: 400px; border-style: solid;">
+            <thead class="table-striped">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Strings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <th>{{list[0]}}</th>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <th>{{list[1]}}</th>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <th>{{list[2]}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  <script src="index.js"></script>  
+</body>
+</html>
